@@ -1,0 +1,49 @@
+# Tugas_Form_Desain-Web
+<!DOCTYPE html>
+<html>
+    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Pembuatan Form</title>
+    <link rel="stylesheet" href="web.css">
+        <body>
+            <div class="wrapper">
+                <h1>Formulir Pendaftaran Karyawan</h1>
+                <form action="" method="post" onSubmit="return validation()">
+                    <div class="form-task">
+                        <label for="fname">Nama :</label>
+                        <input type="text" id="name" name="name" placeholder="Nama">
+                    </div>
+                    <div class="form-task">
+                        <label for="lname">Tempat, Tanggal Lahir :</label>
+                        <input type="text" id="ttl" name="ttl" placeholder="Tempat, Tanggal Lahir">
+                    </div>
+                    <div class="form-task">
+                        <label for="lname">Alamat :</label>
+                        <input type="text" id="alamat" name="alamat" placeholder="Alamat Lengkap">
+                    </div>
+                    <div class="form-task">
+                        <label for="lname">Nomor Telepon :</label>
+                        <input type="text" id="notelp" name="notelp" placeholder="Nomor Telepon">
+                    </div>
+                    <div class="form-task">
+                        <input type="submit" value="send" class="submit">
+                    </div>
+            </div>
+        </body>
+    </head>
+<script type="text/javascript">
+        function validation(){
+            var nama = document.getElementById('name').value;
+            var ttl = document.getElementById('ttl').value;
+            var alamat = document.getElementById('alamat').value;
+            var notelp = document.getElementById('notelp').value;
+            if(nama != "" && ttl != "" && alamat != "" && notelp != ""){
+                return true;
+            }else{
+                alert('Masih ada form yang belum anda isi');
+            }
+        }
+</script>
+</html>
